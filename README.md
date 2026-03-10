@@ -81,14 +81,11 @@ Key visualizations include:
 ### Boxplot Analysis
 ![Boxplot](boxplot_churn.png)
 
-### Confusion Matrix
-![Confusion Matrix](Confusion Matrix.png)
+![Confusion Matrix](Confusion%20Matrix.png)
 
-### ROC Curve
-![ROC Curve](ROC Curve.png)
+![ROC Curve](ROC%20Curve.png)
 
-### Top Important Features
-![Top Features](Top Important Features.png)
+![Top Features](Top%20Important%20Features.png)
 
 ### SHAP Summary Plot
 ![SHAP Summary](shap_summary_plot.png)
