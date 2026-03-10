@@ -6,7 +6,6 @@ https://customer-churn-predictionnn-ml.streamlit.app/
 ---
 
 ## Project Overview
-## Project Overview
 
 Customer churn is a major challenge for subscription-based businesses such as telecom companies. When customers stop using a service, it leads to revenue loss and increased customer acquisition costs.
 
