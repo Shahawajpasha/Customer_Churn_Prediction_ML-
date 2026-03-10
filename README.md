@@ -25,6 +25,9 @@ This project uses machine learning to analyze customer behavior and predict chur
 
 Dataset used: **Telco Customer Churn Dataset**
 
+📂 Dataset Source:  
+https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+
 The dataset contains information about telecom customers including:
 
 - Customer demographics
@@ -63,6 +66,16 @@ Key visualizations include:
 - Monthly charges vs churn
 - Tenure vs churn
 - Feature correlation analysis
+
+### Project Visualizations
+
+![Churn Distribution](images/churn_distribution.png)
+
+![ROC Curve](images/roc_curve.png)
+
+![Feature Importance](images/feature_importance.png)
+
+![SHAP Summary](images/shap_summary.png)
 
 ---
 
@@ -145,7 +158,7 @@ Analysis of the data revealed several important insights:
 
 - Customers with **month-to-month contracts churn more frequently**
 - Customers with **shorter tenure have higher churn probability**
-- Higher **monthly charges increase churn risk**
+- **Higher monthly charges increase churn risk**
 - Customers without **online security or technical support services** tend to churn more often
 
 These insights can help companies design better customer retention strategies.
@@ -166,10 +179,33 @@ These insights can help companies design better customer retention strategies.
 
 ---
 
+## Requirements
+
+To run this project, install the following Python libraries:
+
+```
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+shap
+jupyter
+```
+
+Or install using:
+
+```
+pip install -r requirements.txt
+```
+
+---
+
 ## Project Structure
 
 ```
-customer-churn-prediction
+Customer_Churn_Prediction_ML
 │
 ├── notebooks
 │   └── Customer_Churn_Prediction.ipynb
@@ -177,14 +213,14 @@ customer-churn-prediction
 ├── data
 │   └── Telco-Customer-Churn.csv
 │
-├── models
-│   └── churn_model.pkl
-│
 ├── images
 │   ├── churn_distribution.png
-│   ├── feature_importance.png
 │   ├── roc_curve.png
+│   ├── feature_importance.png
 │   └── shap_summary.png
+│
+├── models
+│   └── churn_model.pkl
 │
 ├── requirements.txt
 │
@@ -209,4 +245,4 @@ Possible improvements for this project:
 **Shahawaj Pasha**
 
 BSc Data Science Student  
-Aspiring Data Analyst/scientist
+Aspiring Data Analyst / Data Scientist
