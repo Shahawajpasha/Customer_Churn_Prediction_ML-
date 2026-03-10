@@ -1,7 +1,5 @@
 # Customer Churn Prediction using Machine Learning
 
-# Customer Churn Prediction using Machine Learning
-
 🚀 **Live App:**  
 https://customer-churn-predictionnn-ml.streamlit.app/
 
