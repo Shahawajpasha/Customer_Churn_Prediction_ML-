@@ -92,13 +92,20 @@ input_data = pd.DataFrame({
 'TotalSpend':[total_spend]
 })
 
-# ---------- PREDICTION ----------
-
 if st.button("Predict Churn"):
 
+    # Get the feature names expected by the model
     model_features = model.get_booster().feature_names
+
+    # Add any missing columns with value 0
+    for col in model_features:
+        if col not in input_data.columns:
+            input_data[col] = 0
+
+    # Ensure column order matches the model
     input_data = input_data[model_features]
 
+    # Make prediction
     prediction = model.predict(input_data)
     probability = model.predict_proba(input_data)[0][1]
 
