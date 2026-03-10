@@ -44,15 +44,10 @@ monthly_charges = st.sidebar.slider("Monthly Charges", 0, 150, 70)
 # ---------- ENCODING ----------
 
 yes_no_map = {"Yes":1,"No":0}
-
 gender_map = {"Female":0,"Male":1}
-
 multiple_lines_map = {"No":0,"Yes":1,"No phone service":2}
-
 internet_map = {"DSL":0,"Fiber optic":1,"No":2}
-
 security_map = {"No":0,"Yes":1,"No internet service":2}
-
 contract_map = {"Month-to-month":0,"One year":1,"Two year":2}
 
 payment_map = {
@@ -67,7 +62,7 @@ payment_map = {
 total_charges = tenure * monthly_charges
 total_spend = tenure * monthly_charges
 
-# ---------- CREATE DATAFRAME ----------
+# ---------- CREATE INPUT DATAFRAME ----------
 
 input_data = pd.DataFrame({
 'gender':[gender_map[gender]],
@@ -92,20 +87,21 @@ input_data = pd.DataFrame({
 'TotalSpend':[total_spend]
 })
 
+# ---------- PREDICTION ----------
+
 if st.button("Predict Churn"):
 
-    # Get the feature names expected by the model
-    model_features = model.get_booster().feature_names
+    # Expected feature order (same as training)
+    expected_columns = [
+        'gender','SeniorCitizen','Partner','Dependents','tenure',
+        'PhoneService','MultipleLines','InternetService','OnlineSecurity',
+        'OnlineBackup','DeviceProtection','TechSupport','StreamingTV',
+        'StreamingMovies','Contract','PaperlessBilling','PaymentMethod',
+        'MonthlyCharges','TotalCharges','TotalSpend'
+    ]
 
-    # Add any missing columns with value 0
-    for col in model_features:
-        if col not in input_data.columns:
-            input_data[col] = 0
+    input_data = input_data[expected_columns]
 
-    # Ensure column order matches the model
-    input_data = input_data[model_features]
-
-    # Make prediction
     prediction = model.predict(input_data)
     probability = model.predict_proba(input_data)[0][1]
 
