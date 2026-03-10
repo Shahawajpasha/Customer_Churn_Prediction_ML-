@@ -67,15 +67,37 @@ Key visualizations include:
 - Tenure vs churn
 - Feature correlation analysis
 
-### Project Visualizations
+## Project Visualizations
 
-![Churn Distribution](images/churn_distribution.png)
+### Customer Churn Distribution
+![Customer Churn Distribution](Customer%20Churn%20Distribution.png)
 
-![ROC Curve](images/roc_curve.png)
+### Churn vs Tenure
+![Churn Tenure](Churn_tenure.png)
 
-![Feature Importance](images/feature_importance.png)
+### Contract Type Analysis
+![Contract](Contract.png)
 
-![SHAP Summary](images/shap_summary.png)
+### Boxplot Analysis
+![Boxplot](boxplot_churn.png)
+
+### Confusion Matrix
+![Confusion Matrix](Confusion Matrix.png)
+
+### ROC Curve
+![ROC Curve](ROC Curve.png)
+
+### Top Important Features
+![Top Features](Top Important Features.png)
+
+### SHAP Summary Plot
+![SHAP Summary](shap_summary_plot.png)
+
+### SHAP Summary Plot 2
+![SHAP Summary](shap_summary_plot1.png)
+
+### SHAP Dependence Plot
+![SHAP Dependence](shap_dependence_plot.png)
 
 ---
 
